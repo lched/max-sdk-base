@@ -28,7 +28,7 @@ if (WIN32)
 			$<$<CONFIG:Release>:/MT>
 			$<$<CONFIG:MinSizeRel>:/MT>
 			$<$<CONFIG:RelWithDebInfo>:/MT>
-		)		
+		)
 	else()
 		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static")
 	endif ()
@@ -61,7 +61,7 @@ if (APPLE)
 	if (CMAKE_OSX_ARCHITECTURES STREQUAL "")
 		set(CMAKE_OSX_ARCHITECTURES x86_64)
 	endif()
-	set(CMAKE_OSX_DEPLOYMENT_TARGET "10.11" CACHE STRING "Minimum OS X deployment version" FORCE)
+	set(CMAKE_OSX_DEPLOYMENT_TARGET "10.13" CACHE STRING "Minimum OS X deployment version" FORCE)
 endif ()
 
 if (DEFINED C74_LIBRARY_OUTPUT_DIRECTORY)
@@ -81,7 +81,7 @@ if (WIN32)
 
 	SET(MaxAPI_LIB ${MAX_SDK_INCLUDES}/x64/MaxAPI.lib)
 	SET(MaxAudio_LIB ${MAX_SDK_MSP_INCLUDES}/x64/MaxAudio.lib)
-	SET(Jitter_LIB ${MAX_SDK_JIT_INCLUDES}/x64/jitlib.lib)	
+	SET(Jitter_LIB ${MAX_SDK_JIT_INCLUDES}/x64/jitlib.lib)
 
 	MARK_AS_ADVANCED (MaxAPI_LIB)
 	MARK_AS_ADVANCED (MaxAudio_LIB)
